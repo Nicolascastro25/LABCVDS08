@@ -5,10 +5,17 @@
  */
 package edu.eci.cvds.sampleprj.dao.mybatis.mappers;
 
+import edu.eci.cvds.samples.entities.ItemRentado;
+
+import java.util.List;
+
 /**
  *
  * @author Jaime Castro -Laura Alvarado
  */
 public interface ItemRentadoMapper {
-    
+
+    ItemRentado consultarItemRentado(int id);
+
+    List<ItemRentado> consultarItemsRentados();
 }
