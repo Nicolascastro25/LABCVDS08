@@ -7,7 +7,7 @@ import edu.eci.cvds.samples.entities.ItemRentado;
 import org.apache.ibatis.annotations.Param;
 
 import edu.eci.cvds.samples.entities.Cliente;
-import sun.util.resources.cldr.ext.LocaleNames_en_GB;
+//import sun.util.resources.cldr.ext.LocaleNames_en_GB;
 
 /**
  *

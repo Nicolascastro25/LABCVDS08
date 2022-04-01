@@ -19,7 +19,7 @@ public class MyBATISTipoItemDAO implements TipoItemDAO {
     public TipoItem consultarTipoItem(int id) throws PersistenceException {
         try {
             return tipoItemMapper.getTipoItem(id);
-        }catch (Exception e) {
+        } catch (Exception e) {
             throw new PersistenceException("No se encuentra el ID del tipo del item");
         }
     }
@@ -27,9 +27,19 @@ public class MyBATISTipoItemDAO implements TipoItemDAO {
     @Override
     public List<TipoItem> consultarTiposItem() throws PersistenceException {
         try {
-            return tipoItemMapper.getTiposItems();
+            return tipoItemMapper.consultarTiposItems();
         } catch (Exception e) {
             throw new PersistenceException("No se encuentra el ID del tipo del item");
         }
+    }
+
+    @Override
+    public void save(TipoItem tipoitem) throws PersistenceException {
+        try {
+            tipoItemMapper.addTipoItem(tipoitem);
+        } catch (org.apache.ibatis.exceptions.PersistenceException e) {
+            throw new PersistenceException("Error al registrar el tipo de item:" + tipoitem.toString(), e);
+        }
+
     }
 }

@@ -5,6 +5,7 @@ import edu.eci.cvds.sampleprj.dao.PersistenceException;
 import edu.eci.cvds.sampleprj.dao.mybatis.mappers.ClienteMapper;
 import edu.eci.cvds.samples.entities.Cliente;
 import edu.eci.cvds.samples.entities.ItemRentado;
+import java.sql.Date;
 
 import java.util.List;
 
@@ -57,6 +58,16 @@ public class MyBATISClienteDAO implements ClienteDAO {
             clienteMapper.vetarCliente(docu,estado);
         }catch(org.apache.ibatis.exceptions.PersistenceException e){
             throw new PersistenceException("no se puede vetar cliente",e);
+        }
+    }
+
+    @Override
+    public void agregarItemRentadoACliente(long idCliente, int idItem, Date fechainicio, Date fechafin) throws PersistenceException {
+        try{
+            clienteMapper.agregarItemRentadoACliente(idCliente,idItem,fechainicio,fechafin);
+        }
+        catch(org.apache.ibatis.exceptions.PersistenceException e) {
+            throw new PersistenceException("Error al agregar el item" + idItem + " a los items rentados del cliente con id" + idCliente, e);
         }
     }
 
