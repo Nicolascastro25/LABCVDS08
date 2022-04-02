@@ -178,6 +178,5 @@ En este laboratorio se utilizará un 'framework' de persistencia. La base de dat
 Laura Valentina Alvarado
 Jaime Nicolas Castro
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/646328dd84cd4e32b9554e0f935dd7f6)](https://app.codacy.com/project/badge/Grade/48f05178a95140968499ff935e51354f)
 
 [![lauraval19](https://circleci.com/gh/lauraval19/lab06CVDS.svg?style=svg)](https://app.circleci.com/pipelines/github/lauraval19/lab07CVDS)
