@@ -172,3 +172,12 @@ En este laboratorio se utilizará un 'framework' de persistencia. La base de dat
 	```
 	
 	Verifique el funcionamiento haciendo una consulta a través del 'mapper' desde MyBatisExample.
+
+# lab08CVDS
+
+Laura Valentina Alvarado
+Jaime Nicolas Castro
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/646328dd84cd4e32b9554e0f935dd7f6)](https://app.codacy.com/project/badge/Grade/48f05178a95140968499ff935e51354f)(https://www.codacy.com/gh/Nicolascastro25/LABCVDS08/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Nicolascastro25/LABCVDS08&amp;utm_campaign=Badge_Grade)
+
+[![lauraval19](https://circleci.com/gh/lauraval19/lab06CVDS.svg?style=svg)](https://app.circleci.com/pipelines/github/lauraval19/lab07CVDS)
