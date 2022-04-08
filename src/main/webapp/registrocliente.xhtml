@@ -24,7 +24,7 @@
             </div>
             <h2>Listado de Clientes: </h2>
             <p:dataTable id="singleDT" var="cliente" value="#{AlquilerItemsBean.consultarClientes()}"
-                         selectionMode="single" selection="#{AlquilerItemsBean.selectedCliente}" paginator="true"
+                         selectionMode="single" selection="#{AlquilerItemsBean.clienteSeleccionado}" paginator="true"
                          paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
                          rowKey="#{cliente.documento}"  rows="7">
                 <f:facet name="header"> Clientes Registrados </f:facet>

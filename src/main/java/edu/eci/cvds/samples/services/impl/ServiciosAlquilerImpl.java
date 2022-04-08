@@ -1,7 +1,9 @@
 package edu.eci.cvds.samples.services.impl;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
+import edu.eci.cvds.sampleprj.dao.ClienteDAO;
 import edu.eci.cvds.sampleprj.dao.ItemDAO;
+import edu.eci.cvds.sampleprj.dao.ItemRentadoDAO;
 import edu.eci.cvds.sampleprj.dao.PersistenceException;
 
 import edu.eci.cvds.samples.entities.Cliente;
@@ -17,6 +19,8 @@ import java.util.List;
 public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
     @Inject
+    private ClienteDAO clienteDAO;
+    @Inject
     private ItemDAO itemDAO;
 
     @Override
@@ -26,17 +30,29 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
     @Override
     public Cliente consultarCliente(long docu) throws ExcepcionServiciosAlquiler {
-        throw new UnsupportedOperationException("Not supported yet.");
+        try {
+            return clienteDAO.consultarCliente(docu);
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
     }
 
     @Override
     public List<ItemRentado> consultarItemsCliente(long idcliente) throws ExcepcionServiciosAlquiler {
-        throw new UnsupportedOperationException("Not supported yet.");
+        try {
+            return clienteDAO.consultarItemsCliente(idcliente);
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
     }
 
     @Override
     public List<Cliente> consultarClientes() throws ExcepcionServiciosAlquiler {
-        throw new UnsupportedOperationException("Not supported yet.");
+        try {
+            return clienteDAO.consultarClientes();
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Not supported yet.");
+        }
     }
 
     @Override
@@ -75,7 +91,11 @@ public class ServiciosAlquilerImpl implements ServiciosAlquiler {
 
     @Override
     public void registrarCliente(Cliente c) throws ExcepcionServiciosAlquiler {
-        throw new UnsupportedOperationException("Not supported yet.");
+        try {
+            clienteDAO.registrarCliente(c);
+        } catch (PersistenceException ex) {
+            throw new ExcepcionServiciosAlquiler("Error al consultar el item ",ex);
+        }
     }
 
     @Override
